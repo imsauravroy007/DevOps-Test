@@ -4,10 +4,10 @@ resource "azurerm_resource_group" "rg-aksdemo" {
 }
 
 resource "azurerm_kubernetes_cluster" "aks-democluster" {
-  name                = "aks-democluster-main"
+  name                = "aks-three-tier"
   location            = azurerm_resource_group.rg-aksdemo.location
   resource_group_name = azurerm_resource_group.rg-aksdemo.name
-  dns_prefix          = "democluster"
+  dns_prefix          = "threetiercluster"
 
   default_node_pool {
     name       = "default"

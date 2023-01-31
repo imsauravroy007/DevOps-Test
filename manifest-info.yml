@@ -1,3 +1,6 @@
+# used an existing  ready made three tier app templete in order to save time
+# this manifest can be deployed to any managed kubernetes platform ( GKE, AKS , EKS   etc)
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
