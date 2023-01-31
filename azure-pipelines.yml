@@ -1,4 +1,5 @@
-
+# pipeline as a code for deploying IAC 
+# any other CI/CD tool like jenkins, gitlab etc can also be used
 
 trigger: 
 - main

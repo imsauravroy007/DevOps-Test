@@ -2,6 +2,6 @@
 *.terraform.lock.hcl
 *.exe
 *.state
-*.azure-pipelines.yml
+#*.azure-pipelines.yml
 # ignore ALL files in ANY directory named temp
 temp/
