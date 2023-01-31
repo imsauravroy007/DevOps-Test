@@ -24,7 +24,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
+    backendServiceArm: 'CognitiveSubscription'
     backendAzureRmResourceGroupName: 'POC'
     backendAzureRmStorageAccountName: 'cloudcoverstorage'
     backendAzureRmContainerName: 'terraformcontainer'
@@ -34,19 +34,19 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
+    environmentServiceNameAzureRM: 'CognitiveSubscription'
 
 # - task: TerraformTaskV3@3
 #   inputs:
 #     provider: 'azurerm'
 #     command: 'apply'
-#     environmentServiceNameAzureRM: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
+#     environmentServiceNameAzureRM: 'CognitiveSubscription'
      
     
 # - task: Kubernetes@1
 #   inputs:
 #     connectionType: 'Azure Resource Manager'
-#     azureSubscriptionEndpoint: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
+#     azureSubscriptionEndpoint: 'CognitiveSubscription'
 #     azureResourceGroup: $(azureResourceGroup)
 #     kubernetesCluster: $(kubernetesCluster)
 #     command: 'apply'
@@ -57,19 +57,12 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'destroy'
-    environmentServiceNameAzureRM: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
+    environmentServiceNameAzureRM: 'CognitiveSubscription'
 
 
 
 
-# - task: AzureCLI@2
-#   inputs:
-#     azureSubscription: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
-#     scriptType: 'batch'
-#     scriptLocation: 'inlineScript'
-#     inlineScript: |
-#       echo  $(azureResourceGroup)
-#      # helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
      
 # - task: CmdLine@2
 #   inputs:
@@ -79,6 +72,7 @@ steps:
 #        echo Hello world
 
 
+# devSecOps sarif tool
   
 - task: Gitleaks@2
   inputs:
